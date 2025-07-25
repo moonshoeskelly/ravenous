@@ -15,18 +15,16 @@ function Business (props) {
     }
 
     return (
-        <div>
-            <div>
-                <img src={business.image} alt="" desc="" title="" />
-                <h3>{business.name}</h3>
-                <p>{business.address}</p>
-                <p>{business.city}</p>
-                <p>{business.state}</p>
-                <p>{business.zipCode}</p>
-                <p>{business.category}</p>
-                <p>{business.rating}</p>
-                <p>{business.reviewCount}</p>
-            </div>
+        <div className={styles.Business}>>
+            <img src={business.image} alt="" desc="" title="" />
+            <h3>{business.name}</h3>
+            <p>{business.address}</p>
+            <p>{business.city}</p>
+            <p>{business.state}</p>
+            <p>{business.zipCode}</p>
+            <p>{business.category}</p>
+            <p>{business.rating}</p>
+            <p>{business.reviewCount}</p>
         </div>
     );
 }
