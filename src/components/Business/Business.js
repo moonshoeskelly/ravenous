@@ -15,7 +15,7 @@ function Business (props) {
     }
 
     return (
-        <div className={styles.Business}>>
+        <div className={styles.Business}>
             <img src={business.image} alt="" desc="" title="" />
             <h3>{business.name}</h3>
             <p>{business.address}</p>
