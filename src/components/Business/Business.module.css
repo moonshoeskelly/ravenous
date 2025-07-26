@@ -1,0 +1,59 @@
+.Business {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px 2%;
+    max-width: 300px;
+    width: 100%;
+}
+
+.businessHeader img {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.businessHeader h2 {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+.BusinesssInfo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.businessAddress {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: left;
+}
+
+.businessAddress p {
+    font-size: 1rem;
+    line-height: 1.25rem;
+}
+
+.businessRanking {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: right;
+}
+
+.businessRanking h3 {
+    color: maroon;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.businessRanking .rating {
+    color: maroon;
+    font-weight: 600;
+}
