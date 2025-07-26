@@ -1,0 +1,93 @@
+.SearchBar {
+    background: url("https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg") bottom / cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    justify-content: center;
+}
+
+.SearchBarSorting {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+    .SearchBarSorting button {
+        color: #fff;
+        cursor: pointer;
+        background-color: rgba(47, 48, 47, 0.75);
+        border: none;
+        border-bottom: 1px solid #fff;
+        font-size: .8rem;
+        font-weight: 600;
+        padding: 5px 20px 5px;
+        line-height: 1.25;
+        text-align: center;
+        transition: color 0.25s;
+        list-style: none;
+        width: 100px;
+    }
+
+.SearchBarSorting button:hover {
+    border-bottom: 1px solid darkorange;
+    color: darkorange;
+}
+
+.SearchBarSorting button.active {
+    border-bottom: 1px solid darkorange;
+    color: darkorange;
+}
+
+.SearchBarSorting button.active:hover {
+    border-bottom: 1px solid darkorange;
+    color: darkorange;
+}
+
+.SearchBarInputs {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.SearchBarInputs input {
+    border: none;
+    border-radius: 5px;
+    font-size: .95rem;
+    font-weight: 400;
+    padding: 13px 5%;
+    width: 269px;
+}
+
+.SearchBarInputs #business-type {
+    margin-bottom: 10px;
+}
+
+.Submit {
+    background-color: maroon;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: .99rem;
+    font-weight: 600;
+    margin: 0 auto;
+    padding: 10px 6%;
+    transition: background-color 0.3s;
+    width: 100%;
+    max-width: 155px;
+
+}
+
+    .Submit:hover {
+        background-color: indianred;
+        cursor: pointer;
+    }
+
+@media (min-width: 768px) {
+
+    .SearchBarInputs {
+        flex-direction: row;
+        justify-content: center;
+        margin-right: 2.22rem;
+    }
+}
