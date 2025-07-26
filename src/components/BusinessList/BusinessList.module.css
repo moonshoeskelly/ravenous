@@ -1,0 +1,9 @@
+.BusinessList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 1400px;
+    width: 100%;
+}
