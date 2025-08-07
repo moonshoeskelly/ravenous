@@ -4,22 +4,13 @@ import styles from './BusinessList.module.css';
 import Business from '../Business/Business';
 
 
-function BusinessList (props) {
+function BusinessList ({ businesses }) {
 
     return (
-       /* <div class="businesss-list">
-            {props.businesses.map((business) => {
-                return <Business key={business.id} info={business} />
+       <div className={styles.BusinessList}>
+            {businesses.map((business) => {
+                return <Business key={business.id} business={business} />
             })};
-        </div> */
-        <div className={styles.BusinessList}>
-            <Business />
-            <Business />
-            <Business />
-            <Business />
-            <Business />
-            <Business />
-            <Business />
         </div>
     );
 }

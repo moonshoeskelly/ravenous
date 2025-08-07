@@ -88,6 +88,20 @@
     .SearchBarInputs {
         flex-direction: row;
         justify-content: center;
-        margin-right: 2.22rem;
     }
+
+    .SearchBarInputs input {
+        padding: 13px 2%;
+    }
+
+    .SearchBarInputs #business-type {
+        margin-bottom: 0;
+        margin-right: 20px;
+    }
+
+    .Submit {
+        padding: 13px 3%;
+        max-width: 170px;
+    }
+    
 }
