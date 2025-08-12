@@ -6,8 +6,10 @@ function Business ({ business }) {
     return (
         <div className={styles.Business}>
             <div className={styles.businessHeader}>
-                <img src={business.image} alt={business.name} desc={business.category} title={business.name} />
-                <h2>{business.name}</h2>
+                <a href={business.url} target="_blank" rel="noopener noreferrer">
+                    <img src={business.image} alt={business.name} desc={business.category} title={business.name} />
+                    <h2>{business.name}</h2>
+                </a>
             </div>
             <div className={styles.BusinesssInfo}>
                 <div className={styles.businessAddress}>

@@ -7,19 +7,25 @@
     width: 100%;
 }
 
+.businessHeader a {
+    text-decoration: none;
+}
+
 .businessHeader img {
     display: flex;
     flex-direction: column;
     height: 300px;
+    object-fit: cover;
     overflow: hidden;
     width: 100%;
 }
 
 .businessHeader h2 {
+    color: #000;
     margin-top: 5px;
     margin-bottom: 10px;
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 700;
     text-align: left;
 }
 
