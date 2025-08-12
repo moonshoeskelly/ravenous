@@ -105,3 +105,10 @@
     }
     
 }
+
+@media (min-width: 1200px) {
+    .Submit {
+        padding: 13px 3%;
+        max-width: 200px;
+    }
+}
