@@ -1,8 +1,11 @@
+const API_BASE_URL = process.env.REACT_APP_API_SERVER;
+
 const yelpSearch = {
+
     async search(searchTerm, location, sortOption) {
         try {
             const response = await fetch(
-                `http://localhost:5000/api/yelp?term=${encodeURIComponent(searchTerm)}&location=${encodeURIComponent(location)}&sortBy=${sortOption}`
+                `${API_BASE_URL}/api/yelp?term=${encodeURIComponent(searchTerm)}&location=${encodeURIComponent(location)}&sortBy=${sortOption}`
             );
 
             const data = await response.json();
