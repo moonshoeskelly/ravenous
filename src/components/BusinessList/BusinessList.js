@@ -10,7 +10,7 @@ function BusinessList ({ businesses }) {
        <div className={styles.BusinessList}>
             {businesses.map((business) => {
                 return <Business key={business.id} business={business} />
-            })};
+            })}
         </div>
     );
 }
