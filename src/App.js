@@ -21,6 +21,7 @@ function App() {
                 setShowNoResults(true);
             } else {
                 setShowMessage(false);
+                setShowNoResults(false);
             }
 
         } catch (error) {
