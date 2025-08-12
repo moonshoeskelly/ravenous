@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './SearchBar.module.css';
 
-const SearchBar = () => {
+const SearchBar = ({ searchYelp }) => {
 
     const sortOptions = [
         { value: "best_match", option: "Best Match" },
@@ -37,7 +37,11 @@ const SearchBar = () => {
     }
 
     const handleSearch = () => {
-      console.log(`Searching Yelp with ${searchTerm}, ${location}, ${sortOption}`);
+        if (!searchTerm || !location) {
+            alert("Please enter both a search term and a location.");
+            return;
+        }
+        searchYelp(searchTerm, location, sortOption);
     };
 
     return (

@@ -1,66 +1,54 @@
+import React, { useState } from "react";
 import './App.css';
-
 import SearchBar from './components/SearchBar/SearchBar';
 import BusinessList from './components/BusinessList/BusinessList';
+import yelpSearch from "./utils/yelp";
 
 function App() {
-    const businesses = [
-    {
-        id: 1,
-        image: 'https://content.codecademy.com/programs/react/ravenous/pizza.jpg',
-        name: 'MarginOtto Pizzeria',
-        address: '1010 Paddington Way',
-        city: 'Flavortown',
-        state: 'NY',
-        zipCode: '10101',
-        category: 'Italian',
-        rating: 4.5,
-        reviewCount: 90
-    },
-    {
-        id: 2,
-        image: 'https://content.codecademy.com/programs/react/ravenous/pizza.jpg',
-        name: 'MarginOtto Pizzeria',
-        address: '1010 Paddington Way',
-        city: 'Flavortown',
-        state: 'NY',
-        zipCode: '10101',
-        category: 'Italian',
-        rating: 4.5,
-        reviewCount: 90
-    },
-    {
-        id: 3,
-        image: 'https://content.codecademy.com/programs/react/ravenous/pizza.jpg',
-        name: 'MarginOtto Pizzeria',
-        address: '1010 Paddington Way',
-        city: 'Flavortown',
-        state: 'NY',
-        zipCode: '10101',
-        category: 'Italian',
-        rating: 4.5,
-        reviewCount: 90
-    },
-    {
-        id: 4,
-        image: 'https://content.codecademy.com/programs/react/ravenous/pizza.jpg',
-        name: 'MarginOtto Pizzeria',
-        address: '1010 Paddington Way',
-        city: 'Flavortown',
-        state: 'NY',
-        zipCode: '10101',
-        category: 'Italian',
-        rating: 4.5,
-        reviewCount: 90
-    },
-  ];
+    const [businesses, setBusinesses] = useState([]);
+    const [showMessage, setShowMessage] = useState(false);
+    const [showNoResults, setShowNoResults] = useState(false);
 
-  return (
-    <div className="App">
-    <SearchBar />
-      <BusinessList businesses={businesses} />
-    </div>
-  );
+    const searchYelp = async (term, location, sortBy) => {
+        try {
+            const results = await yelpSearch.search(term, location, sortBy);
+            setBusinesses(results);
+
+            if (!results) {
+                setShowMessage(true);
+            } else if (results.length === 0) {
+                setShowMessage(false);
+                setShowNoResults(true);
+            } else {
+                setShowMessage(false);
+            }
+
+        } catch (error) {
+            console.error('Search failed:', error.message);
+        }
+    };
+
+    return (
+        <div className="App">
+        <h1>Ravenous</h1>
+        <SearchBar searchYelp={searchYelp} />
+        {showMessage && (
+          <div className="message">
+            <p>
+              There is a server error, please try again later.
+            </p>
+          </div>
+        )}
+        {showNoResults && (
+          <div className="noResults">
+            <p>
+              No results found, please try a different search.
+            </p>
+          </div>
+        )}
+        <BusinessList businesses={businesses} />
+        </div>
+    );
 }
 
 export default App;

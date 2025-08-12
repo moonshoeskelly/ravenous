@@ -12,6 +12,16 @@
   pointer-events: none;
 }
 
+h1 {
+    background-color: maroon;
+    color: white;
+    padding: 10px 0;
+}
+
+.message, .noResults {
+    margin-top: 20px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
